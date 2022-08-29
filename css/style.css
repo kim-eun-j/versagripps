@@ -1,0 +1,885 @@
+/* 백그라운드 *************************** */
+#background {
+    background: url(../images/back3.png);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+.innerBox {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* header ****************************** */
+header {
+    background: #022026;
+}
+
+.headTop {
+    padding-top: 20px;
+}
+
+.gnb>ul {
+    float: right;
+    display: flex;
+}
+
+.gnb>ul>li {
+    margin-left: 10px;
+}
+
+.gnb>ul>li:hover {
+    text-decoration: underline;
+}
+.gnb .ham{
+    display: none;
+    position: absolute;
+    right:15px;
+    top:18px;
+}
+.logo {
+    text-align: center;
+    padding-top: 60px;
+    position: relative;
+    z-index: 100;
+}
+.logo img{
+    max-width: 189px;
+    width:100%;
+}
+
+/* nav ******************************* */
+nav>#nav {
+    margin-top: 50px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+#nav>li {
+    position: relative;
+}
+
+nav>#nav>li>a {
+    display: block;
+    font-size: 1.5em;
+    font-weight: 500;
+    padding: 0 35px 5px 35px;
+}
+
+/* sub ********************************** */
+.sub {
+    display: block;
+    line-height: 2;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    transition: 0.5s;
+    z-index: 1000;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-top: 25px;
+}
+
+.sub>li {
+    text-align: center;
+    width: 100%;
+}
+
+.sub>li>a {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.sub>li>a:hover {
+    color: rgb(226, 69, 69);
+}
+
+#nav:hover .sub {
+    display: block;
+    height: 300px;
+}
+
+nav::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
+    background: #022026;
+    position: absolute;
+    top: 225px;
+    transition: 0.5s;
+
+}
+
+nav:hover::before {
+    height: 300px;
+}
+
+#nav>li>a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: rgb(226, 69, 69);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+#nav>li>a:hover::after {
+    width: 100%;
+}
+
+/* topVideo **************************************** */
+#tvideoWrap {
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+#tvideoWrap>video {
+    width: 100%;
+}
+
+/* 각 div당 제목 *********************************** */
+.titleWrap {
+    text-align: center;
+    position: relative;
+    /* padding-top: 6%; */
+    width: 100%;
+}
+
+.titleWrap>img {
+    width: 30%;
+}
+
+.titleWrap>h2 {
+    font-size: 2em;
+    position: absolute;
+    top: 37%;
+    transform: translateY(-37%);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 베르사그립 *************************************** */
+.versaWrap>.innerBox {
+    width:100%;
+    max-width: 1500px;
+    overflow: hidden;
+}
+
+.versaWrap .grips {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grips {
+    padding-top: 6%;
+}
+
+.grips>li {
+    position: relative;
+}
+
+.grips>li:hover .product {
+    width: 70%;
+}
+
+.grips .aniback {
+    width: 100%;
+}
+
+.grips .product {
+    position: absolute;
+    top: 20%;
+    transform: translateY(-20%);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+    transition: 0.5s;
+}
+
+.grips p {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2em;
+}
+
+.grips .aniback {
+    animation-name: circleani;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes circleani {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 브랜드 스토리 ************************ */
+.exclusiveWrap {
+    width: 100%;
+    padding-top: 8%;
+    margin-bottom: 6%;
+    position: relative;
+    overflow: hidden;
+}
+
+.exclusiveWrap>img {
+    width: 100%;
+}
+
+.exclusiveWrap>.textBox {
+    position: absolute;
+    top: 80%; 
+    transform: translateY(-80%);
+    left: 25%;
+    transform: translateX(-25%);
+    line-height: 1.5;
+}
+
+.textBox>.strong {
+    font-size: 2em;
+}
+
+.textBox>p {
+    font-size: 1.5em;
+}
+
+.textBox>.click>a:hover {
+    color:red;
+    text-decoration: underline;
+}
+
+/* 아트클립 ********************************** */
+.artback {
+    background: url(../images/art_back.png) no-repeat;
+    background-size: 100%;
+    margin-bottom: 6%;
+}
+
+.artback>.innerBox {
+    overflow: hidden;
+}
+
+.artclipWrap {
+    width: 100%;
+}
+.artclipWrap>.titleWrap{
+    max-width: 1195px;
+    width:100%;
+}
+
+.artclipWrap>.titleWrap>img {
+    width: 50%;
+}
+
+.artclip {
+    display: flex;
+    padding-top: 5%;
+    width: 300%;
+    text-align: center;
+    margin-left: -3.6%;
+}
+
+.artclip>li {
+    position: relative;
+    margin-right: 3%;
+}
+
+.artclip>li .clipback {
+    width: 80%;
+    animation-name: clipAni;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.artclip>li .clip {
+    width: 50%;
+    
+}
+.artclip>li:first-child .clip {
+    width: 65%;
+}
+.artclip>li:last-child .clip{
+    max-width: 150px;
+    width:100%;
+    top:12.5%;
+}
+.artclip p{
+    font-size: 1.2em;
+}
+.artclip>li>a:hover p {
+    color: aqua;
+    text-decoration: underline;
+}
+
+.artclip>li:first-child {
+    margin-left: 1.2%;
+}
+
+.artclip .clip {
+    position: absolute;
+    top: 20%;
+    transform: translateY(-20%);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes clipAni {
+    0% {
+        opacity: 0.5;
+    }
+
+    10%,
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+
+    }
+}
+
+.arrow>.left {
+    position: absolute;
+    left: 0;
+    bottom: 25%;
+}
+
+.arrow>.right {
+    position: absolute;
+    right: 0;
+    bottom: 25%;
+}
+.arrow a:hover{
+    opacity:0.6;
+}
+
+/* 매거진 ************************************ */
+.magazineWrap {
+    position: relative;
+    /* width: 100%; */
+    overflow: hidden;
+}
+.magazine {
+    display: flex;
+    width:200%;
+    padding-top: 5%;
+}
+.magazine>li{
+    padding-right: 1%;
+}
+.magazine img{
+    /* max-width: 500px; */
+    width:100%;
+}
+
+/* 비디오 **************************************** */
+.videoWrap{
+    padding-top: 5%;
+}
+.videoWrap .innerBox{
+    /* max-width:1200px; */
+    display: flex;
+}
+.video {
+    /* display: flex;
+    width:300%;
+    margin-top: 3%;
+    margin-left: -12.5%; */
+    position: relative;
+    height:500px;
+    width:100%;
+}
+.video>li{
+    position:absolute;
+    top:8.5%;
+    left:3%;
+    display: none;
+}
+.video>li:first-child{
+    display: block;
+}
+.video video{
+    max-width: 900px;
+    width:100%;
+}
+.thumb{
+    margin-right: 5%;
+    
+}
+.thumb>.active{
+    border: 2px solid red;
+}
+.thumb img{
+    max-width: 200px;
+    width: 100%;
+}
+.videoArrow>p:nth-child(2){
+    font-size: 1.4em;
+    color: aquamarine;
+}
+.videoArrow a:hover{
+    opacity: 0.6;
+}
+
+/*  푸터 *************************************** */
+footer{
+    background: url(../images/footback2.png);
+    background-position:center 90%;
+    padding-top:5%;
+    padding-bottom: 5%;
+}
+.footerBack{
+    border-top: 2px solid white;
+}
+.footTop{
+    overflow: hidden;
+    padding-top: 4%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.footTop p{
+    padding-bottom: 3%;
+}
+.footTop strong{
+    font-size: 23px;
+}
+.customer>.sns{
+    display: flex;
+}
+.footBottom{
+    border-top: 2px solid white;
+    text-align: center;
+    margin-top: 1%;
+}
+address{
+    padding-top: 3%;
+}
+address>p{
+    padding-top: 2%;
+}
+/* 반응형 푸터 ********************************* */
+.moFoot{
+    display: none;
+    text-align: center;
+}
+.mofTop{
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+}
+.mofTop>.motext{
+    margin-right: 6%;
+}
+.mofTop .moSns{
+    display: flex;
+}
+.mofTop .moSns img{
+    width: 100%;
+}
+.mofTop .mosns>p{
+    font-size: 1.2em;
+}
+.motext strong{
+    font-size: 1.8em;
+}
+.mofMiddle{
+    display: flex;
+    justify-content: center;
+    background-color: #06505f;
+    padding: 1% 0;
+    box-sizing: border-box;
+    margin-top: 2%;
+}
+.mofMiddle>li{
+    margin: 0 4%;
+}
+.mofBottom{
+    padding-top: 2%;
+}
+.moCon>p:first-child{
+    font-size: 1.2em;
+}
+.confirmImg{
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+}
+.confirmImg img{
+    width:100%;
+}
+/* 미디어 ************************************* */
+@media screen and (max-width:1669px) {
+    .artclipWrap>.titleWrap{
+        margin-left: 10%;
+        max-width: 1000px;
+        width:100%;
+    }
+    .textBox>.strong {
+        font-size: 1.7em;
+    }
+    
+    .textBox>p {
+        font-size: 1.3em;
+    }
+}
+@media screen and (max-width:1280px) {
+    nav{
+        position: fixed;
+        top:50px;
+        right:-100%;
+        background: #06505f;
+        width:50%;
+        height: 100vh;
+        z-index: 10000;
+    }
+    nav>#nav{
+        display: block;
+    }
+    nav>#nav>li{
+        text-align: center;
+        /* padding-bottom: 2%; */
+        padding:2%;
+    }
+    nav>#nav>li>a{
+        border-bottom:2px solid #022026;
+        font-size: 1.3em;
+        padding:0;
+    }
+    .sub>li>a{
+        font-size: 1em;
+    }
+    #nav:hover .sub{
+        display: none;
+        height: auto;
+    }
+    .sub{
+        display: none;
+        transition: none;
+        position:static;
+    }
+    nav:hover::before{
+        height: 0;
+    }
+    #nav>li>a:hover::after{
+        width:30%;
+    }
+    .gnb>ul{
+        margin-right:50px;
+    }
+    .gnb .ham{
+        display: block;
+    }
+    #tvideoWrap{
+        padding-top: 4%;
+    }
+    .titleWrap h2{
+        font-size: 1.5em;
+    }
+    .artclipWrap>.titleWrap{
+        margin-left: 17%;
+        max-width: 800px;
+        width:100%;
+    }
+    .textBox>.strong {
+        font-size: 1.5em;
+    }
+    
+    .textBox>p {
+        font-size: 1.1em;
+    }
+    .exclusiveWrap>.textBox{
+        top:70%;
+    }
+}
+@media screen and (max-width:1230px){
+    .titleWrap h2{
+        font-size: 1.2em;
+    }
+    .artclipWrap>.titleWrap{
+        margin-left: 22%;
+        max-width: 700px;
+        width:100%;
+    }
+}
+@media screen and (max-width:1200px){
+    .artclipWrap>.titleWrap{
+        margin-left: 18%;
+        max-width: 700px;
+        width:100%;
+    }
+    .artclip>li:last-child .clip{
+        max-width: 130px;
+    }
+}
+@media screen and (max-width:1024px){
+    .artclipWrap>.titleWrap{
+        margin-left: 16%;
+    }
+    .artclip>li:last-child .clip{
+        max-width: 120px;
+    }
+}
+@media screen and (max-width:1000px){
+    .artclipWrap>.titleWrap{
+        margin-left: 20%;
+        max-width: 600px;
+        width:100%;
+    }
+    
+}
+@media screen and (max-width:981px){
+    .footTop,.footBottom{
+        display: none;
+    }
+    .moFoot{
+        display: block;
+    }
+    .artclip>li:last-child .clip{
+        max-width: 110px;
+    }
+}
+@media screen and (max-width:870px){
+    .artclip>li:last-child .clip{
+        max-width: 90px;
+    }
+    .artclipWrap>.titleWrap{
+        margin-left: 20%;
+        max-width: 500px;
+        width:100%;
+    }
+}
+@media screen and (max-width:870px){
+    .titleWrap h2{
+        font-size: 1em;
+    }
+}
+@media screen and (max-width:768px){
+    .artclipWrap>.titleWrap{
+        margin-left: 19%;
+        max-width: 465px;
+        width:100%;
+    }
+    
+    .textBox>.strong {
+        font-size: 1.3em;
+    }
+    .innerBox{
+        padding:0 15px;
+        box-sizing: border-box;
+    }
+    .headTop{
+        padding-top: 10px;
+    }
+    .gnb .ham{
+        top:8px;
+    }
+    .logo{
+        padding-top: 20px;
+    }
+    .textBox>p {
+        font-size: 1em;
+    }
+    .exclusiveWrap>.textBox{
+        top:65%;
+    }
+    .grips p{
+        font-size: 1em;
+    }
+    .videoWrap .innerBox{
+        display: block;
+    }
+    .video>li{
+        left:0;
+    }
+    .thumb{
+        display: flex;
+        padding-left: 5%;
+        box-sizing: border-box;
+    }
+    .artclip>li:last-child .clip{
+        max-width: 80px;
+    }
+    
+}
+@media screen and (max-width:700px) {
+    .video{
+        height:450px;
+    }
+    .grips p{
+        font-size: 0.8em;
+    }
+    .artclip p{
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width:670px) {
+    .video{
+        height:420px;
+    }
+    .artclip>li:last-child .clip{
+        max-width: 75px;
+    }
+    .artclipWrap>.titleWrap{
+        margin-left: 20%;
+        max-width: 400px;
+        width:100%;
+    }
+    .mofTop>.motext{
+        font-size: 0.8em;
+    }
+    .mofTop .mosns>p{
+        font-size: 0.6em;
+    }
+    .mofMiddle a{
+        font-size: 0.6em;
+    }
+    .moCon p{
+        font-size: 0.8em;
+    }
+    .moCon address{
+        font-size: 0.6em;
+    }
+}
+@media screen and (max-width:622px){
+    .artclip>li:last-child .clip{
+        max-width: 70px;
+    }
+    .video{
+        height:380px;
+    }
+    .artclipWrap>.titleWrap{
+        margin-left: 21%;
+        max-width: 350px;
+        width:100%;
+    }
+    .gnb li>a{
+        font-size: 0.8em;
+    }
+    .logo img{
+        max-width:170px;
+    }
+    
+}
+@media screen and (max-width:565px){
+    .artclip>li:last-child .clip{
+        max-width: 55px;
+    }
+    .video{
+        height:360px;
+    }
+
+    .textBox>.strong {
+        font-size: 1em;
+    }
+    .textBox>p {
+        font-size: 0.8em;
+    }
+    .exclusiveWrap>.textBox{
+        top:55%;
+    }
+}
+@media screen and (max-width:500px){
+    .video{
+        height:300px;
+    }
+    .artclipWrap>.titleWrap{
+        margin-left: 19%;
+        max-width: 310px;
+        width:100%;
+    }
+    .grips p{
+        top:7%;
+    }
+}
+@media screen and (max-width:468px){
+    .artclip>li:last-child .clip{
+        max-width: 45px;
+    }
+    .video{
+        height:280px;
+    }
+}
+@media screen and (max-width:426px){
+    .video{
+        height:260px;
+    }
+    .artclipWrap>.titleWrap{
+        margin-left: 18%;
+        max-width: 270px;
+        width:100%;
+    }
+}
+@media screen and (max-width:390px){
+    .artclipWrap>.titleWrap{
+        margin-left: 20%;
+        max-width: 235px;
+        width:100%;
+    }
+}
+@media screen and (max-width:380px){
+    .video{
+        height:240px;
+    }
+}
+@media screen and (max-width:375px){
+    .artclipWrap>.titleWrap{
+        margin-left: 20%;
+        max-width: 230px;
+        width:100%;
+    }
+    .titleWrap>h2{
+        top:22%;
+    }
+    .arrow{
+        display: none;
+    }
+}
+@media screen and (max-width:360px){
+    .artclip>li:last-child .clip{
+        max-width: 35px;
+    }
+    .video{
+        height:220px;
+    }
+    .artclipWrap>.titleWrap{
+        margin-left: 18%;
+        max-width: 230px;
+        width:100%;
+    }
+    .grips p{
+        top:4%;
+    }
+    .gnb li>a{
+        font-size: 0.6em;
+    }
+    .logo img{
+        max-width:140px;
+    }
+    .exclusiveWrap>.textBox{
+        top:50%;
+    }
+    @media screen and (max-width:280px){
+        .artclipWrap>.titleWrap{
+            margin-left: 18%;
+            max-width: 180px;
+            width:100%;
+        }
+        .gnb>ul>li{
+            margin-left: 5px;
+        }
+    }
+}
